@@ -1,1 +1,1 @@
-web: gunicorn digitrec.wsgi
+web: gunicorn digitrec.wsgi --log-file -
