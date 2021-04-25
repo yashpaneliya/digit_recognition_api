@@ -19,13 +19,12 @@ def getimagefromrequest(request):
     # if request.method == 'POST':
     # print('POST',request.data.get('image'))
     # body = json.loads(request.body)
-    image = request.FILES.get("image")
+    image = request.FILES.get("file")
     print("image:", type(image))
     print("image:", type(image.file))
     # print("image:", type(image.read()))
 
     image_bytes = image.read()
-    
     # final_image = np
     # print('hello')
     digit, acc = classify_handwriting(image_bytes)
